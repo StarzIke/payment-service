@@ -16,7 +16,6 @@ import com.assessment.PaymentProcessor.repository.StudentRepository;
 import com.assessment.PaymentProcessor.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -122,5 +121,4 @@ public class PaymentService {
         // Retrieve payments where the parent was the payer
         return paymentRepository.findByInitiatingParent(parent);
     }
-
 }

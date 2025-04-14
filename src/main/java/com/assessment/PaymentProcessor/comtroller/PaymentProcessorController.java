@@ -3,12 +3,10 @@ package com.assessment.PaymentProcessor.comtroller;
 
 import com.assessment.PaymentProcessor.dto.PaymentRequest;
 import com.assessment.PaymentProcessor.model.PaymentLog;
-import com.assessment.PaymentProcessor.model.User;
 import com.assessment.PaymentProcessor.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

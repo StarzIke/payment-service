@@ -24,6 +24,7 @@ public class UserService {
 
     public void registerUser(UserRequest request) {
         User user = new User();
+        user.setFullName(request.getFullName());
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole(request.getRole());

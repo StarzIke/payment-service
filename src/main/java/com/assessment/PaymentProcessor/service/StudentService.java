@@ -29,14 +29,12 @@ public class StudentService {
     private PasswordEncoder passwordEncoder;
 
     public Student createStudent(StudentRequest request) {
-        // Retrieve linked parents
-        List<Parent> parents = parentRepository.findAllById(request.getParentIds());
 
         // Create student entity
         Student student = new Student();
         student.setFullName(request.getName());
         student.setAccountBalance(request.getBalance());
-        student.setParents(parents);
+
         return studentRepository.save(student);
     }
 

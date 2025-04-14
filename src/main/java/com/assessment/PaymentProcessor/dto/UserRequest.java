@@ -12,6 +12,7 @@ import lombok.EqualsAndHashCode;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper = false)
 public class UserRequest {
+    private String fullName;
 
     @NotEmpty(message = "username cannot be empty")
     private String username;

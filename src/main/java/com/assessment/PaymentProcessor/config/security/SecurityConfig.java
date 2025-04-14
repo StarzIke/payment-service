@@ -53,7 +53,7 @@ public class SecurityConfig {
                             .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/swagger-resources/**", "/webjars/**").permitAll()
                             .requestMatchers("/h2-console/**").permitAll()
                             .requestMatchers("/", "/assets/**").permitAll()
-                            .requestMatchers("/api/auth/register").permitAll()
+                            .requestMatchers("/api/auth/**").permitAll()
                             .anyRequest().authenticated();
                 })
                 .csrf(AbstractHttpConfigurer::disable// Disable CSRF for H2 Console

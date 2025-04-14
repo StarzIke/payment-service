@@ -14,10 +14,8 @@ import java.util.List;
 @Data
 @Table(name = "parent")
 public class Parent extends BaseEntity{
-    @Column(name = "full_name")
     private String fullName;
 
-    @Column(name = "account_balance")
     private Double accountBalance;
 
     @ManyToMany(mappedBy = "parents", cascade = CascadeType.ALL)
